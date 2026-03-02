@@ -14,11 +14,11 @@ async function searchCountry(countryName) {
         const country = data[0];
         // Update DOM
         document.getElementById("country-info").innerHTML = 
-            `<h2> ${country.name.common} </h2>`
-            `<p><strong>Capital:</strong> ${country.capital[0] : "N/A" }</p>`
-            `<p><strong>Population:</strong> ${country.population.toLocaleString()}</p>`
-            `<p><strong>Region:</strong> ${country.region}</p>`
-            `<img src="${country.flags.svg}" alt="${country.name.common} flag" width "150">
+            `<h2> ${country.name.common} </h2>
+            <p><strong>Capital:</strong> ${country.capital?[0] ?? "N/A" }</p>
+            <p><strong>Population:</strong> ${country.population.toLocaleString()}</p>
+            <p><strong>Region:</strong> ${country.region}</p>
+            <img src="${country.flags.svg}" alt="${country.name.common} flag" width "150">
             `;
         // Fetch bordering countries
         // Update bordering countries section
@@ -30,8 +30,8 @@ async function searchCountry(countryName) {
 }
 
 // Event listeners
-searchBtn.addEventListener("click, () =>{
-     searchCountry(country.Input.value.trim());                      
+searchBtn.addEventListener("click", () =>{
+     searchCountry(countryInput.value.trim());                      
 });
 
 countryInput.addEventListener("keypress", (e) => {
