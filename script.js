@@ -1,4 +1,6 @@
 const spinner = document.getElementById("loading-spinner");
+const searchBtn = document.getElementById("search-btn");
+const countryInput = document.getElementById("country-input");
 async function searchCountry(countryName) {
     try {
         // Show loading spinner
