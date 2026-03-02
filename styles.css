@@ -7,3 +7,11 @@
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+.country-card {
+    background-color: mistyrose;
+    border-width: 7px;
+    border-color: black;
+    border-style: dashed;
+    text-align: center;
+}
