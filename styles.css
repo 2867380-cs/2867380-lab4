@@ -15,3 +15,15 @@
     border-style: dashed;
     text-align: center;
 }
+
+.borde-grid {
+    display: flex;
+    text-align: center;
+}
+
+.error{
+    color: red;
+    border-width: 7px;
+    border-color: black;
+    border-style: solid;
+}
