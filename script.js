@@ -1,6 +1,7 @@
 async function searchCountry(countryName) {
     try {
         // Show loading spinner
+        spinner.classList.remove("hidden");
         // Fetch country data
         const response = await fetch(`https://restcountries.com/v3.1/name/${countryName}`);
         const country = await response.json();
@@ -13,12 +14,11 @@ async function searchCountry(countryName) {
             <img src="${country.flags.svg}" alt="${country.name.common} flag">
             ;
         // Fetch bordering countries
-        
         // Update bordering countries section
     } catch (error) {
         // Show error message
     } finally {
-        // Hide loading spinner
+        spinner.classList.add("hidden");
     }
 }
 
